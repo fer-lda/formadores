@@ -7,7 +7,7 @@
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -139,4 +139,38 @@ h2 {
 /* chama classe do bootstrap para modificar a cor */
 .form-control {
     background-color: #F1EDEF;
+}
+
+.opcoes-acessibilidade {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Somente exibe as opções quando o botão de acessibilidade for clicado */
+.menu-acessibilidade.show-options .opcoes-acessibilidade {
+    display: block;
+    opacity: 1;
+}
+
+.menu-acessibilidade:hover .opcoes-acessibilidade{
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    transform-origin: right center;
 }
